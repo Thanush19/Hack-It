@@ -1,0 +1,19 @@
+to update reload project " mvn clean install -U
+
+
+
+to test db
+http://localhost:8080/actuator/health
+
+
+
+curl -X POST http://localhost:8080/api/users/register \
+     -H "Content-Type: application/json" \
+     -d '{
+           "email": "testuser@example.com",
+           "username": "testuser",
+           "password": "password123",
+           "collegeName": "XYZ University",
+           "locality": "New York",
+           "phoneNo": "1234567890"
+         }'
